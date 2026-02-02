@@ -22,6 +22,8 @@ def is_perfect(n):
 def is_armstrong(n):
     digits = str(abs(n))
     power = len(digits)
+    if power <3:
+        return False
     total = sum(int(d) ** power for d in digits)
     return total == abs(n)
 
